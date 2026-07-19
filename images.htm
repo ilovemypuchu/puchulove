@@ -1,288 +1,236 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Birthday Memories</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
-
-body{
-
-background:linear-gradient(135deg,#ffd6e8,#ffc2dc,#ffb3d1,#ffe4f1);
-overflow-x:hidden;
-min-height:100vh;
-position:relative;
-
-}
-
-/* Floating Hearts */
-
-.heart{
-position:fixed;
-bottom:-50px;
-color:#ff5c9f;
-animation:float linear infinite;
-opacity:.7;
-pointer-events:none;
-}
-
-@keyframes float{
-
-0%{
-transform:translateY(0) scale(.5);
-opacity:0;
-}
-
-20%{
-opacity:.8;
-}
-
-100%{
-transform:translateY(-120vh) scale(1.4);
-opacity:0;
-}
-
-}
-
-/* Decorations */
-
-.star{
-position:fixed;
-font-size:30px;
-animation:spin 8s linear infinite;
-}
-
-@keyframes spin{
-
-100%{
-transform:rotate(360deg);
-}
-
-}
-
-.container{
-
-width:90%;
-max-width:1200px;
-margin:auto;
-padding:50px 0;
-text-align:center;
-z-index:10;
-position:relative;
-
-}
-
-h1{
-
-font-family:Pacifico;
-font-size:52px;
-color:#ff2f7f;
-margin-bottom:20px;
-
-}
-
-.note{
-
-background:rgba(255,255,255,.35);
-backdrop-filter:blur(10px);
-padding:25px;
-border-radius:20px;
-color:#7b2450;
-font-size:20px;
-line-height:1.8;
-box-shadow:0 8px 25px rgba(0,0,0,.1);
-margin-bottom:45px;
-
-}
-
-.gallery{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-
-}
-
-.card{
-
-background:white;
-border-radius:22px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-transition:.4s;
-
-}
-
-.card:hover{
-
-transform:translateY(-10px) scale(1.04);
-
-}
-
-.card img{
-
-width:100%;
-height:320px;
-object-fit:cover;
-
-}
-
-.caption{
-
-padding:18px;
-font-size:18px;
-font-weight:600;
-color:#ff2f7f;
-
-}
-
-.btn{
-
-margin-top:50px;
-padding:16px 50px;
-border:none;
-border-radius:50px;
-font-size:20px;
-cursor:pointer;
-background:#ff4f94;
-color:white;
-transition:.3s;
-box-shadow:0 8px 20px rgba(255,0,100,.3);
-
-}
-
-.btn:hover{
-
-background:#ff1975;
-transform:scale(1.06);
-
-}
-
-.footer{
-
-margin-top:35px;
-font-size:26px;
-color:#ff4f94;
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="star" style="top:8%;left:5%;">🎀</div>
-<div class="star" style="top:15%;right:8%;">🌸</div>
-<div class="star" style="bottom:12%;left:8%;">✨</div>
-<div class="star" style="bottom:10%;right:6%;">💖</div>
-
-<div class="container">
-
-<h1>Happy Birthday Princess ❤️</h1>
-
-<div class="note">
-
-🌹 To the most beautiful girl... 🌹
-
-<br><br>
-
-Every smile of yours makes the world brighter.
-Every moment spent with you becomes a beautiful memory.
-Today is all about celebrating the wonderful person you are.
-
-May your life always be filled with happiness,
-success, laughter, endless love and magical moments.
-
-You deserve all the happiness in the world.
-
-🎂 Happy Birthday, Beautiful! 🎂
-
-</div>
-
-<div class="gallery">
-
-<div class="card">
-<img src="img1.jpg">
-<div class="caption">Beautiful Smile 😊</div>
-</div>
-
-<div class="card">
-<img src="img2.jpg">
-<div class="caption">My Favorite Memory ❤️</div>
-</div>
-
-<div class="card">
-<img src="img3.jpg">
-<div class="caption">Pretty as Always 🌸</div>
-</div>
-
-<div class="card">
-<img src="img4.jpg">
-<div class="caption">Shining Like a Star ✨</div>
-</div>
-
-<div class="card">
-<img src="img5.jpg">
-<div class="caption">Cutest Moments 🧸</div>
-</div>
-
-<div class="card">
-<img src="img6.jpg">
-<div class="caption">Forever Gorgeous 💕</div>
-</div>
-
-</div>
-
-<button class="btn" onclick="location.href='nextpage.html'">
-Next Surprise 🎁 →
-</button>
-
-<div class="footer">
-💖 Made with Love 💖
-</div>
-
-</div>
-
-<script>
-
-function createHeart(){
-
-const heart=document.createElement("div");
-
-heart.className="heart";
-
-heart.innerHTML="❤";
-
-heart.style.left=Math.random()*100+"vw";
-
-heart.style.fontSize=(15+Math.random()*35)+"px";
-
-heart.style.animationDuration=(5+Math.random()*6)+"s";
-
-document.body.appendChild(heart);
-
-setTimeout(()=>{
-heart.remove();
-},11000);
-
-}
-
-setInterval(createHeart,250);
-
-</script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Birthday Memories</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Poppins, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #ffd6e8, #ffc2dc, #ffb3d1, #ffe4f1);
+        overflow-x: hidden;
+        min-height: 100vh;
+        position: relative;
+      }
+
+      /* Floating Hearts */
+
+      .heart {
+        position: fixed;
+        bottom: -50px;
+        color: #ff5c9f;
+        animation: float linear infinite;
+        opacity: 0.7;
+        pointer-events: none;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0) scale(0.5);
+          opacity: 0;
+        }
+
+        20% {
+          opacity: 0.8;
+        }
+
+        100% {
+          transform: translateY(-120vh) scale(1.4);
+          opacity: 0;
+        }
+      }
+
+      /* Decorations */
+
+      .star {
+        position: fixed;
+        font-size: 30px;
+        animation: spin 8s linear infinite;
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 50px 0;
+        text-align: center;
+        z-index: 10;
+        position: relative;
+      }
+
+      h1 {
+        font-family: Pacifico;
+        font-size: 52px;
+        color: #ff2f7f;
+        margin-bottom: 20px;
+      }
+
+      .note {
+        background: rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(10px);
+        padding: 25px;
+        border-radius: 20px;
+        color: #7b2450;
+        font-size: 20px;
+        line-height: 1.8;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        margin-bottom: 45px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        transition: 0.4s;
+      }
+
+      .card:hover {
+        transform: translateY(-10px) scale(1.04);
+      }
+
+      .card img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+      }
+
+      .caption {
+        padding: 18px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #ff2f7f;
+      }
+
+      .btn {
+        margin-top: 50px;
+        padding: 16px 50px;
+        border: none;
+        border-radius: 50px;
+        font-size: 20px;
+        cursor: pointer;
+        background: #ff4f94;
+        color: white;
+        transition: 0.3s;
+        box-shadow: 0 8px 20px rgba(255, 0, 100, 0.3);
+      }
+
+      .btn:hover {
+        background: #ff1975;
+        transform: scale(1.06);
+      }
+
+      .footer {
+        margin-top: 35px;
+        font-size: 26px;
+        color: #ff4f94;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="star" style="top: 8%; left: 5%">🎀</div>
+    <div class="star" style="top: 15%; right: 8%">🌸</div>
+    <div class="star" style="bottom: 12%; left: 8%">✨</div>
+    <div class="star" style="bottom: 10%; right: 6%">💖</div>
+
+    <div class="container">
+      <h1>Happy Birthday Puchu ❤️</h1>
+
+      <div class="note">
+        🌹 To the most beautiful girl... 🌹
+
+        <br /><br />
+
+        Every smile of yours makes the world brighter. Every moment spent with
+        you becomes a beautiful memory. Today is all about celebrating the
+        wonderful person you are. May your life always be filled with happiness,
+        success, laughter, endless love and magical moments. You deserve all the
+        happiness in the world. 🎂 Happy Birthday, Puchu! 🎂
+      </div>
+
+      <div class="gallery">
+        <div class="card">
+          <img src="images/bs.jpeg" />
+          <div class="caption">Beautiful Smile 😊</div>
+        </div>
+
+        <div class="card">
+          <img src="images/favmem.jpeg" />
+          <div class="caption">My Favorite Memory ❤️</div>
+        </div>
+
+        <div class="card">
+          <img src="images/pretty.jpeg" />
+          <div class="caption">Pretty as Always 🌸</div>
+        </div>
+
+        <div class="card">
+          <img src="images/star.jpeg" />
+          <div class="caption">Shining Like a Star ✨</div>
+        </div>
+
+        <div class="card">
+          <img src="images/cutest.jpeg" />
+          <div class="caption">Cutest Moments 🧸</div>
+        </div>
+
+        <div class="card">
+          <img src="images/gorgeous.jpeg" />
+          <div class="caption">Forever Gorgeous 💕</div>
+        </div>
+      </div>
+
+      <div class="footer">💖 Made with lots of Love 💖</div>
+    </div>
+
+    <script>
+      function createHeart() {
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.innerHTML = "❤";
+
+        heart.style.left = Math.random() * 100 + "vw";
+
+        heart.style.fontSize = 15 + Math.random() * 35 + "px";
+
+        heart.style.animationDuration = 5 + Math.random() * 6 + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 11000);
+      }
+
+      setInterval(createHeart, 250);
+    </script>
+  </body>
 </html>
